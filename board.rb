@@ -15,7 +15,7 @@ class Board
         @rows[row][col] = piece
     end
 
-    def move_piece(start_pos,end_pos)
+    def move_piece(color, start_pos,end_pos)
         raise "No piece at start position" if self[start_pos].nil?
         raise "Piece cannot move to end position" if end_pos.any? { |num| !num.between?(0,7)}
     end

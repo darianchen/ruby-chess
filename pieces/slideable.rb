@@ -1,4 +1,4 @@
-module Slidable 
+module Slideable 
     
     HORIZONTAL_DIRS = [ 
     [-1,0], #left

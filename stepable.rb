@@ -1,32 +1,17 @@
 module Stepable
+    def moves
+        valid_moves = []
+        x, y = self.pos
 
-    moves = []
-
-    
-def moves
-    # create array to collect moves
-
-    # iterate through each of the piece's possible move_diffs
-      # for each move_diff, increment the piece's position to generate a new position
-      # add the new position to the moves array if it is:
-        # on the board and empty, 
-        # OR on the board and contains a piece of the opposite color
-
-    # return the final array of moves
-    
-    valid_moves = []
-       dx, dy = self.pos
-      move_diffs.each do |move| #[3,4]
-       if board[pos] != NullPiece || board[pos] == Piece.color != self.color
-        valid_moves << move
-       end
-      end
-      valid_moves
+        move_diffs.each do |dx,dy|
+            if board[[x+dx,y+dy]] && (board[[x + dx,y + dy]] == NullPiece || board[[x + dx,y + dy]].color != self.color)
+                valid_moves << [x + dx,y + dy]
+            end
+        end
+        valid_moves
     end
 
-  end
-
-  private
+    private
     def move_diffs
         raise NotImplementedError
     end 

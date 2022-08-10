@@ -1,4 +1,7 @@
-class King
+require_relative "piece"
+require_relative "stepable"
+
+class King < Piece
   include Stepable
 
     KING_DIRS = [
@@ -12,13 +15,10 @@ class King
         [1,-1]
     ].freeze
 
-    def initialize()
-        super
-        
-    end
+ 
 
-    def symbol
-      '♚'.colorize(color)
+    def symbol #get
+      '♚'.colorize(:color)
     end
   
     protected

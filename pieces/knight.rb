@@ -1,4 +1,4 @@
-class Knight
+class Knight < Piece
 
     KNIGHT_DIRS = [
         [-2, -1],

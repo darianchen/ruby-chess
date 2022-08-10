@@ -1,13 +1,21 @@
+require "colorize"
 class Piece
     attr_reader :pos, :board
     def initialize(color,board,pos)
-        :color
-        @board
-        @pos
+        @color = color
+        @board = board
+        @pos = pos
     end
 
-    def to_s
-     
+
+   
+
+    def inspect # p calls this
+        symbol
+    end
+
+    def to_s # puts, print calls this
+        symbol
     end
 
     def empty?
@@ -24,7 +32,7 @@ class Piece
     end
 
     def symbol 
-        @color
+        
     end
 
     private

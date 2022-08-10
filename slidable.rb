@@ -1,7 +1,13 @@
 module Slidable 
     
-    HORIZONTAL_DIRS = []
-    DIAGONAL_DIRS = []
+    HORIZONTAL_DIRS = [ 
+    
+    ]
+    DIAGONAL_DIRS = [
+        
+    ]
+
+
 
     def moves
     
@@ -30,21 +36,28 @@ end
 
 class Rook < Piece
 
+
     def initialize
-
+        super
     end
 
-    def symbol
-        @symbol
-    end
+   
 
 end
 
 class Bishop < Piece
     
+    def initialize
+        super
+    end
+
 end
 
 class Queen < Piece
+
+    def initialize
+        super
+    end
 
 end
 

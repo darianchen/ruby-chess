@@ -1,7 +1,7 @@
 class Piece
-
+    attr_reader :pos :board
     def initialize(color,board,pos)
-        @color
+        :color
         @board
         @pos
     end
@@ -14,16 +14,17 @@ class Piece
 
     end
 
-    def valid_moves
+    def valid_moves(array) #valid not in check moves
+
 
     end
 
     def pos=()
-    
+        
     end
 
     def symbol 
-        
+        @color
     end
 
     private

@@ -29,7 +29,9 @@ class Board
             puts row.join(" ")
         end
     end
-
-
 end
 
+b = Board.new
+k = Knight.new(:black,b,[7,1])
+k.moves
+b.print_board

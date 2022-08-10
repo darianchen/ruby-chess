@@ -1,5 +1,8 @@
-class Knight < Piece
+require_relative "piece"
+require_relative "stepable"
 
+class Knight < Piece
+  include Stepable
     KNIGHT_DIRS = [
         [-2, -1],
         [-2,  1],
@@ -11,8 +14,8 @@ class Knight < Piece
         [ 2,  1]
     ].freeze
 
-    def symbol
-        '♞'.colorize(color)
+      def symbol
+        '♞'.colorize(:color)
       end
     
       protected

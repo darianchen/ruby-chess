@@ -1,6 +1,6 @@
 class King
   include Stepable
-  
+
     KING_DIRS = [
         [-1,0], #left
         [1,0],  #right
@@ -11,6 +11,11 @@ class King
         [-1,1],
         [1,-1]
     ].freeze
+
+    def initialize()
+        super
+        
+    end
 
     def symbol
       '♚'.colorize(color)

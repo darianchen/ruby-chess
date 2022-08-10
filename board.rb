@@ -25,12 +25,8 @@ class Board
 
     def print_board
         @board.each do |row|
-            row.each do |square|
-                print square
-            end
-            puts
+            puts row.join(" ")
         end
-
     end
 
 

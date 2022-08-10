@@ -4,7 +4,7 @@ module Stepable
         x, y = self.pos
 
         move_diffs.each do |dx,dy|
-            if board[[x+dx,y+dy]] && (board[[x + dx,y + dy]] == NullPiece || board[[x + dx,y + dy]].color != self.color)
+            if (x+dx).between?(0..7) && (y+dy).bewteen?(0..7) && ((board[[x + dx,y + dy]] == NullPiece || board[[x + dx,y + dy]].color != self.color))
                 valid_moves << [x + dx,y + dy]
             end
         end

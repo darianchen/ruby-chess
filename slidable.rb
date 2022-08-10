@@ -30,7 +30,7 @@ module Slidable
     private
 
     def move_dirs
-        
+        raise NotImplementedError
     end
 
     def grow_unblocked_moves_in_dir(dx,dy)

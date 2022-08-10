@@ -34,30 +34,9 @@ module Slidable
     
 end
 
-class Rook < Piece
 
 
-    def initialize
-        super
-    end
 
-   
 
-end
 
-class Bishop < Piece
-    
-    def initialize
-        super
-    end
-
-end
-
-class Queen < Piece
-
-    def initialize
-        super
-    end
-
-end
 

@@ -1,13 +1,13 @@
 require "byebug"
 module Stepable
-    def moves        
-        valid_moves = []
+    def moves
+        valid_moves = []        
         x, y = self.pos
-        debugger
         move_diffs.each do |dx,dy|
-             if (x+dx).between?(0,7) && (y+dy).between?(0,7) 
-                if (board[[x + dx,y + dy]] == nil) #|| board[[x + dx,y + dy]].color != self.color)
-                    valid_moves << [x + dx,y + dy]
+            next_pos = [x + dx, y + dy]
+            if next_pos.all? { |coord| coord.between?(0, 7) }
+                if board[next_pos] == "⚿" || board[next_pos].color != self.color
+                    valid_moves << next_pos
                 end
             end 
         end
@@ -19,4 +19,3 @@ module Stepable
         raise NotImplementedError
     end 
 end
-

@@ -15,8 +15,6 @@ class King < Piece
         [1,-1]
     ].freeze
 
- 
-
     def symbol #get
       '♚'.colorize(:color)
     end

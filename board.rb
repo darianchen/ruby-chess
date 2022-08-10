@@ -32,6 +32,22 @@ class Board
 end
 
 b = Board.new
-k = Knight.new(:black,b,[7,1])
-k.moves
+r = Rook.new(:black,b,[7,0])
+knight = Knight.new(:black,b,[7,1])
+bishop = Bishop.new(:black,b,[7,2])
+k = King.new(:black, b, [7, 3])
+queen = Queen.new(:black, b, [7, 4])
+bishop2 = Bishop.new(:black,b,[7,5])
+knight2 = Knight.new(:black,b,[7,6])
+rook2 = Rook.new(:black,b,[7,7])
+
+b[[7, 0]] = r
+b[[7, 1]] = knight
+b[[7, 2]] = bishop
+b[[7, 3]] = queen
+b[[7, 4]] = k
+b[[7, 5]] = bishop2
+b[[7, 6]] = knight2
+b[[7, 7]] = rook2
+
 b.print_board

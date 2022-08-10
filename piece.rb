@@ -7,14 +7,14 @@ class Piece
     end
 
     def to_s
-
+     
     end
 
     def empty?
-
+        
     end
 
-    def valid_moves(array) #valid not in check moves
+    def valid_moves #valid not in check moves
 
 
     end

@@ -14,13 +14,14 @@ def moves
 
     # return the final array of moves
     
-    new_pos = []
+    valid_moves = []
        dx, dy = self.pos
-      move_diffs.each do |move|
-        new_pos << [move[0] + dx, move[1] + dy]
+      move_diffs.each do |move| #[3,4]
+       if board[pos] != NullPiece || board[pos] == Piece.color != self.color
+        valid_moves << move
+       end
       end
-      new_pos
-
+      valid_moves
     end
 
   end
@@ -29,7 +30,5 @@ def moves
     def move_diffs
         raise NotImplementedError
     end 
-
 end
 
-end

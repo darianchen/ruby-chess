@@ -1,5 +1,6 @@
 class King
-
+  include Stepable
+  
     KING_DIRS = [
         [-1,0], #left
         [1,0],  #right
@@ -11,8 +12,6 @@ class King
         [1,-1]
     ].freeze
 
-    include Stepable
-
     def symbol
       '♚'.colorize(color)
     end
@@ -20,6 +19,7 @@ class King
     protected
   
     def move_diffs
-      # return an array of diffs representing where a King can step to
       KING_DIRS
     end
+
+  end
